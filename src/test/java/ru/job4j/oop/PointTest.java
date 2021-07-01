@@ -28,4 +28,13 @@ public class PointTest {
         Assert.assertEquals(dist, rsl, 0.1);
 
     }
+
+    @Test
+    public void ThenDistance3dWhen3() {
+        Point a = new Point(1, 2, 4);
+        Point b = new Point(2, 5, 3);
+        double dist = a.distance(b);
+        double rsl = 3.1;
+        Assert.assertEquals(dist, rsl, 0.1);
+    }
 }
