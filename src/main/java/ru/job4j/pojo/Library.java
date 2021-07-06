@@ -28,9 +28,8 @@ public class Library {
             System.out.println(pr.getName() + pr.getQuantity());
         }
 
-        for (int i = 0; i < book.length; i++) {
-            Book pr = book[i];
-            if (pr.getName().equals("Чистый код ")) {
+        for (Book pr : book ) {
+            if ("Чистый код ".equals(pr.getName())) {
                 System.out.println("Найдена книга : " + pr.getName());
             }
         }
