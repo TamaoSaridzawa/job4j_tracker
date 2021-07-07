@@ -46,4 +46,17 @@ public class Tracker {
         }
         return Arrays.copyOf(newItems, count);
     }
+
+    public boolean replace(int id, Item item) {
+        item = findById(id);
+        if (item.equals(null)) {
+            return false;
+        }
+        else {
+            int index = indexOf(id);
+            item.setName("Bug with description");
+            items[index] = item;
+            return true;
+        }
+    }
 }
