@@ -12,3 +12,4 @@ public class Bus2 implements Vehicle{
         return time * 100;
     }
 }
+

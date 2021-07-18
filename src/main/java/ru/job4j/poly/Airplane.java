@@ -12,3 +12,4 @@ public class Airplane implements Vehicle{
         return time * 800;
     }
 }
+

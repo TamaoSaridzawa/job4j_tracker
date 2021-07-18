@@ -5,3 +5,4 @@ public interface Vehicle {
 
     public double speed(double time);
 }
+

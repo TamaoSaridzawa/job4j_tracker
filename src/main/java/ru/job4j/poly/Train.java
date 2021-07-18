@@ -13,3 +13,4 @@ public class Train implements Vehicle{
         return time * 150;
     }
 }
+
