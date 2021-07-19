@@ -49,7 +49,7 @@ public class StartUI {
         }
     }
 
-    public static void findByItem(Input input, Tracker tracker) {
+    public static void findByIdItem(Input input, Tracker tracker) {
         System.out.println("=== Find item by id ====");
         System.out.print("Enter id: ");
         int id = input.askInt("Введите id");
@@ -93,7 +93,7 @@ public class StartUI {
                StartUI.deleteItem(input, tracker);
             }
             else if (select == 4) {
-                StartUI.findByItem(input, tracker);
+                StartUI.findByIdItem(input, tracker);
             }
             else if (select == 5) {
                 StartUI.findNameItem(input, tracker);
