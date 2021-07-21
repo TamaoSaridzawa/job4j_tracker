@@ -36,11 +36,10 @@ public class StartUITest {
         Item item = new Item("delete");
         tracker.add(item);
         String[] answers = {
-                String.valueOf(item.getId()),
-                "delete item"
+                String.valueOf(item.getId())
         };
         StartUI.deleteItem(new StubInput(answers), tracker);
         Item delete = tracker.findById(item.getId());
-        assertThat(null, is(delete));
+        assertNull(delete);
     }
 }
