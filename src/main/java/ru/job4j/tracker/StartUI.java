@@ -3,10 +3,10 @@ package ru.job4j.tracker;
 
 public class StartUI {
 
-    private final Output out;
+    private final Output output;
 
-    public StartUI(Output out) {
-        this.out = out;
+    public StartUI(Output output) {
+        this.output = output;
     }
 
     public void init(Input input, Tracker tracker, UserAction[] actions) {
@@ -20,9 +20,9 @@ public class StartUI {
     }
 
     private void showMenu(UserAction[] actions) {
-        System.out.println("Меню");
+        output.println("Меню");
         for (int i = 0; i < actions.length; i++) {
-            System.out.println(i + ". " + actions[i].name());
+           output.println(i + ". " + actions[i].name());
         }
     }
 
@@ -31,8 +31,8 @@ public class StartUI {
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
         UserAction[] actions = {new CreateAction(output), new FindAction(),
-            new ReplaceAction(), new DeleteAction(), new FindByIdAction(),
-            new FindNameAction(), new ExitAction()
+            new ReplaceAction(output), new DeleteAction(output), new FindByIdAction(output),
+            new FindNameAction(output), new ExitAction(output)
         };
         new StartUI(output).init(input, tracker, actions);
     }
