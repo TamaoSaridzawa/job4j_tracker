@@ -10,12 +10,12 @@ public class FactTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void calc() {
-       Fact.calc(-2);
+      new Fact().calc(-2);
     }
 
     @Test
     public void when2Then2() {
-      int rsl = Fact.calc(2);
+      int rsl = new Fact().calc(2);
       assertThat(rsl, is(2));
     }
 }
