@@ -124,6 +124,7 @@ public class StartUITest {
         assertThat(output.toString(), is("Menu" + ln
         + "0.  Show all items " + ln
         + "1. Exit" + ln
+        + "В хранилище еще нет заявок" + ln
         + "Menu" + ln
         + "0.  Show all items " + ln
         + "1. Exit" + ln));
