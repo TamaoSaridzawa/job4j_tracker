@@ -44,11 +44,15 @@ public class ValidateInputTest {
     public void whenInvalidInput4() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"1", "1", "1"}
+                new String[] {"1", "2", "3"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
         assertThat(selected, is(1));
+        selected = input.askInt("Enter menu:");
+        assertThat(selected, is(2));
+        selected = input.askInt("Enter menu:");
+        assertThat(selected, is(3));
     }
 
 }
