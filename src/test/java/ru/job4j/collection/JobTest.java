@@ -80,8 +80,8 @@ public class JobTest {
     public void whenCmbReversComparatorByName() {
         Comparator<Job> cmbComparator = new ReversComparatorByName().
                 thenComparing(new ReversComparatorByPriority());
-        int rsl = cmbComparator.compare(new Job("Lena", 9),
+        int rsl = cmbComparator.compare(new Job("Danila", 9),
                 new Job("Danila", 12));
-        assertThat(rsl, lessThan(0));
+        assertThat(rsl, lessThan(2));
     }
 }
