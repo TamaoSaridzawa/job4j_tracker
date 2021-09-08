@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class ItemTest {
 
     @Test
-    public void CompareTest(){
+    public void compareTest() {
         ItemComparator itemComparator = new ItemComparator();
         List<Item> list = new ArrayList(Arrays.asList(
                 new Item("Petr"),
@@ -28,7 +28,7 @@ public class ItemTest {
     }
 
     @Test
-    public void ReReversCompareTest(){
+    public void reReversCompareTest() {
         ItemReversComparator itemReversComparator = new ItemReversComparator();
         List<Item> list = new ArrayList(Arrays.asList(
                 new Item("Petr"),

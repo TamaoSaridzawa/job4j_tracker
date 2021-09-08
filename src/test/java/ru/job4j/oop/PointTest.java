@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class PointTest {
 
     @Test
-    public void ThenDistanceWhen2(){
+    public void pointThenDistanceWhen2() {
         Point a = new Point(0, 2);
         Point b = new Point(2, 3);
         double dist = a.distance(b);
@@ -20,7 +20,7 @@ public class PointTest {
     }
 
     @Test
-    public void ThenDistanceWhen3(){
+    public void pointThenDistanceWhen3() {
         Point a = new Point(1, 2);
         Point b = new Point(2, 5);
         double dist = a.distance(b);
@@ -30,7 +30,7 @@ public class PointTest {
     }
 
     @Test
-    public void ThenDistance3dWhen3() {
+    public void pointThenDistance3dWhen3() {
         Point a = new Point(1, 2, 4);
         Point b = new Point(2, 5, 3);
         double dist = a.distance(b);

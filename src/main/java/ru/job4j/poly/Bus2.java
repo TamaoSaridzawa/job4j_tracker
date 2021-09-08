@@ -1,6 +1,6 @@
 package ru.job4j.poly;
 
-public class Bus2 implements Vehicle{
+public class Bus2 implements Vehicle {
 
     @Override
     public void move() {

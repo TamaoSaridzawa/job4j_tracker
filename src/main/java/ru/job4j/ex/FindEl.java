@@ -10,10 +10,10 @@ public class FindEl {
             throw new ElementNotFoundException("Ошибка ввода данных");
     }
 
-    public static void main(String[] args) throws ElementNotFoundException{
+    public static void main(String[] args) throws ElementNotFoundException {
         String[] array = {"Alex", "Garik", "Rex", "Gav", "Tyapa"};
         try {
-            System.out.println("Индекс элемента найден : " + FindEl.indexOf(array, "Gav") );
+            System.out.println("Индекс элемента найден : " + FindEl.indexOf(array, "Gav"));
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
         }

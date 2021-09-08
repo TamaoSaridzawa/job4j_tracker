@@ -18,6 +18,7 @@ public class College {
         student.setSurname("Yurievich ");
         student.setGroup("intern ");
         student.setEntrance(calendar.getTime());
-        System.out.println(student.getFamily() + student.getName() + student.getSurname() + student.getGroup() + student.getEntrance());
+        System.out.println(student.getFamily() + student.getName()
+                + student.getSurname() + student.getGroup() + student.getEntrance());
     }
 }

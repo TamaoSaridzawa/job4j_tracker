@@ -1,6 +1,6 @@
 package ru.job4j.ooa;
 
-final public class Airbus extends Aircraft{
+final public class Airbus extends Aircraft {
     private static final int COUNT_ENGINE = 2;
     private String name;
 

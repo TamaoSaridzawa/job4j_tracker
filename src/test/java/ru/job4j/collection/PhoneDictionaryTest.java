@@ -12,7 +12,7 @@ public class PhoneDictionaryTest {
     @Test
     public void whenFindBySurName() {
         PhoneDictionary phone = new PhoneDictionary();
-        phone.add(new Person( "Danila", "Ryzhov", "93612495", " Kuzneck"));
+        phone.add(new Person("Danila", "Ryzhov", "93612495", " Kuzneck"));
         ArrayList<Person> persons = phone.find("zhov");
         assertThat(persons.get(0).getSurname(), is("Ryzhov"));
     }

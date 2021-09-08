@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class FindNameAction implements UserAction{
+public class FindNameAction implements UserAction {
 
     private final Output output;
+
     public FindNameAction(Output output) {
         this.output = output;
     }

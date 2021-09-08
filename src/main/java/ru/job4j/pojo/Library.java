@@ -18,7 +18,7 @@ public class Library {
         }
 
         System.out.println("");
-        Book temp ;
+        Book temp;
         temp = book[0];
         book[0] = book[3];
         book[3] = temp;
@@ -28,7 +28,7 @@ public class Library {
             System.out.println(pr.getName() + pr.getQuantity());
         }
 
-        for (Book pr : book ) {
+        for (Book pr : book) {
             if ("Чистый код ".equals(pr.getName())) {
                 System.out.println("Найдена книга : " + pr.getName());
             }

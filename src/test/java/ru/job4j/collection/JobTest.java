@@ -20,7 +20,7 @@ public class JobTest {
         List<Job> expected = new ArrayList<>();
         expected.add(new Job("Danila", 27));
         expected.add(new Job("Gleb", 21));
-        Collections.sort(users,comparatorByName);
+        Collections.sort(users, comparatorByName);
         Assert.assertEquals(users, expected);
     }
 
@@ -33,7 +33,7 @@ public class JobTest {
         List<Job> expected = new ArrayList<>();
         expected.add(new Job("Gleb", 27));
         expected.add(new Job("Danila", 21));
-        Collections.sort(users,reversComparatorByName);
+        Collections.sort(users, reversComparatorByName);
         Assert.assertEquals(users, expected);
     }
 
@@ -48,7 +48,7 @@ public class JobTest {
                 new Job("Gleb", 21),
                 new Job("Danila", 26),
                 new Job("Danila", 27)));
-        Collections.sort(users,comparatorByPriority);
+        Collections.sort(users, comparatorByPriority);
         Assert.assertEquals(users, expected);
     }
 
@@ -63,7 +63,7 @@ public class JobTest {
                 new Job("Danila", 27),
                 new Job("Danila", 26),
                 new Job("Gleb", 21)));
-        Collections.sort(users,reversComparatorByPriority);
+        Collections.sort(users, reversComparatorByPriority);
         Assert.assertEquals(users, expected);
     }
 

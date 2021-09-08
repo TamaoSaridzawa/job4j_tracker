@@ -32,7 +32,7 @@ public class StartUITest {
         Item item = tracker.add(new Item("Replaced item"));
         String replacedName = "New item name";
         Input in = new StubInput(
-                new String[] {"0", String.valueOf(item.getId()), replacedName , "1"} // здесь должны быть входные данные
+                new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
         );
         Output output = new ConsoleOutput();
         List<UserAction> actions = List.of(
@@ -48,7 +48,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Deleted item"));
         Input in = new StubInput(
-                new String[] {"0" , String.valueOf(item.getId()), "1"}
+                new String[] {"0", String.valueOf(item.getId()), "1"}
         );
         Output output = new ConsoleOutput();
         List<UserAction> actions = List.of(
@@ -68,8 +68,8 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         List<UserAction> actions = List.of(new ExitAction(output));
         new StartUI(output).init(in, tracker, actions);
-        assertThat(output.toString(), is( "Menu" + System.lineSeparator() +
-                "0. Exit" + System.lineSeparator()
+        assertThat(output.toString(), is("Menu" + System.lineSeparator()
+                + "0. Exit" + System.lineSeparator()
         ));
     }
 
@@ -79,7 +79,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Test item"));
         Input input = new StubInput(
-                new String[] { "0" , String.valueOf(item.getId()), "1"}
+                new String[] {"0", String.valueOf(item.getId()), "1"}
         );
         List<UserAction> actions = List.of(
                 new FindByIdAction(output),
@@ -101,7 +101,7 @@ public class StartUITest {
         Output output = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("test"));
-        Input input = new StubInput(new String[] { "0", item.getName(), "1"});
+        Input input = new StubInput(new String[] {"0", item.getName(), "1"});
         List<UserAction> actions = List.of(
                 new FindNameAction(output),
                 new ExitAction(output)
@@ -121,12 +121,12 @@ public class StartUITest {
     public void whenFindAll() {
         Output output = new StubOutput();
         Tracker tracker = new Tracker();
-        Input input = new StubInput(new String[] { "0", "1"});
+        Input input = new StubInput(new String[] {"0", "1"});
         List<UserAction> actions = List.of(
                 new FindAction(output),
                 new ExitAction(output)
         );
-        new StartUI(output).init(input,tracker,actions);
+        new StartUI(output).init(input, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(output.toString(), is("Menu" + ln
                 + "0.  Show all items " + ln

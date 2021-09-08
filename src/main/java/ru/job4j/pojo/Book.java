@@ -4,9 +4,10 @@ public class Book {
     private String name;
     private int quantity;
 
-    public Book(){
+    public Book() {
 
     }
+
     public Book(String name, int quantity) {
         this.name = name;
         this.quantity = quantity;

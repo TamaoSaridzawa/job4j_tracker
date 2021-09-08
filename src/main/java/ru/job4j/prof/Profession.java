@@ -9,6 +9,7 @@ public class Profession {
     public Profession() {
 
     }
+
     public Profession(String name, String surname, String education, int birthday) {
         this.name = name;
         this.surname = surname;
@@ -16,20 +17,19 @@ public class Profession {
         this.birthday = birthday;
     }
 
-
-    public String getName(String name){
-        return this.name = name;
+    public String getName(String name) {
+        return name;
     }
 
-    public String getSurname(String surname){
-        return this.surname = surname;
+    public String getSurname(String surname) {
+        return surname;
     }
 
-    public String getEducation(String education){
-        return this.education = education;
+    public String getEducation(String education) {
+        return education;
     }
 
-    public int getBirthday(int birthday){
-        return this.birthday = birthday;
+    public int getBirthday(int birthday) {
+        return birthday;
     }
 }
