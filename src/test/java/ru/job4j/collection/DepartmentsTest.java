@@ -25,14 +25,19 @@ public class DepartmentsTest {
         assertThat(result, is(expect));
     }
 
-    @Ignore
     @Test
-    public void whenNonChange1() {
-        List<String> input = Arrays.asList("k1", "k1/sk1", "sdwa", "k1/sk2", "a1/k2");
-        List<String> expect = Arrays.asList("a1/k2", "k1");
-        List<String> result = Departments.fillGaps(input);
-        Departments.sortAsc(result);
-        assertThat(result, is(expect));
+    public void whenSortAsc() {
+        List<String> input = Arrays.asList("k1/sk1", "k1", "k1/sk1/ssk2", "k1/sk1/ssk1", "k2");
+        List<String> expect = Arrays.asList("k1", "k1/sk1", "k1/sk1/ssk1", "k1/sk1/ssk2", "k2");
+        Departments.sortAsc(input);
+        assertThat(input, is(expect));
     }
 
+    @Test
+    public void whenSortDesc() {
+        List<String> input = Arrays.asList("k1/sk1", "k1", "k1/sk1/ssk2", "k1/sk1/ssk1", "k2");
+        List<String> expect = Arrays.asList("k2", "k1", "k1/sk1", "k1/sk1/ssk1", "k1/sk1/ssk2");
+        Departments.sortDesc(input);
+        assertThat(input, is(expect));
+    }
 }
