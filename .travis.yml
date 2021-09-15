@@ -18,3 +18,7 @@ notifications:
       - tamaosaridzawa9@gmail.com
     on_success: never # default: change
     on_failure: always # default: always
+
+env:
+  global:
+    - CODECOV_TOKEN='fabc1ef7-221e-4edc-89c1-cf2fcf1dc5cd'
