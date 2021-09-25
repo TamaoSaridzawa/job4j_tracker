@@ -12,7 +12,7 @@ public class FunctionalInterfaces {
         List<String> list = List.of("one", "two", "three", "four", "five", "six", "seven");
         BiConsumer<Integer, String> biCon = (s, s1) -> map.put(s, s1);
         int temp = 1;
-        for (String s1: list ) {
+        for (String s1: list) {
             biCon.accept(temp++, s1);
         }
         for (Map.Entry<Integer, String> pair : map.entrySet()) {
