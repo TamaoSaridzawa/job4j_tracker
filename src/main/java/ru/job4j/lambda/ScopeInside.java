@@ -4,12 +4,12 @@ import java.util.function.Supplier;
 
 public class ScopeInside {
     public static void main(String[] args) {
-        int[] number = {1, 2, 3};
+        int[] number = {1, 2, 3, 9, 4};
         int total = 0;
-        for (int i = 0; i < number.length; i++) {
-            int num = number[i] + total;
+        for (int num: number ) {
+            int rsl = total;
             total = add(
-                    () -> num
+                    () -> rsl + num
             );
         }
         System.out.println(total);
