@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 public class StreamUsage {
     public static void main(String[] args) {
         List<Integer> list = List.of(4, 0, -1, -4, 3, -2, 8, -7);
-        List<Integer> streamm = list.stream()
+        List<Integer> stream = list.stream()
                 .filter(in -> in >= 0)
                 .collect(Collectors.toList());
-        streamm.forEach(System.out::println);
+        stream.forEach(System.out::println);
     }
 }
