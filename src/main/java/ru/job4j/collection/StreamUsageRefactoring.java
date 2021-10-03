@@ -20,8 +20,8 @@ public class StreamUsageRefactoring {
                 new Task("Task #2", 20),
                 new Task("Bug #3", 40)
         );
-        tasks.stream().
-                filter(task -> task.name.contains("Bug"))
+        tasks.stream()
+                .filter(task -> task.name.contains("Bug"))
                 .filter(task -> task.spent > 30)
                 .map(task -> task.name + " " + task.spent)
                 .forEach(System.out::println);
