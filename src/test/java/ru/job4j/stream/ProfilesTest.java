@@ -30,7 +30,7 @@ public class ProfilesTest {
         Address address = new Address("Moscow", "Lenina", 8, 13);
         Address address2 = new Address("Moscow", "Lenina", 243, 1);
         Address address3 = new Address("Moscow", "Lenina", 243, 1);
-        Address address4 = new Address("Argentina", "Lenina", 243, 1);
+        Address address4 = new Address("Abakan", "Lenina", 243, 1);
         Profiles profiles = new Profiles();
         List<Profile> profile = new ArrayList<>();
         profile.add(new Profile(address));
@@ -39,7 +39,7 @@ public class ProfilesTest {
         profile.add(new Profile(address4));
         List<Address> rsl = profiles.collect(profile);
         List<Address> expected = List.of(
-                new Address("Argentina", "Lenina", 243, 1),
+                new Address("Abakan", "Lenina", 243, 1),
                 new Address("Moscow", "Lenina", 8, 13),
                 new Address("Moscow", "Lenina", 243, 1)
         );
