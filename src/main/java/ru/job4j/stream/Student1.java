@@ -2,12 +2,12 @@ package ru.job4j.stream;
 
 import java.util.Objects;
 
-public class Student {
+public class Student1 {
     private int score;
 
     private String surname;
 
-    public Student(int score, String surname) {
+    public Student1(int score, String surname) {
         this.score = score;
         this.surname = surname;
     }
@@ -28,7 +28,7 @@ public class Student {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Student student = (Student) o;
+        Student1 student = (Student1) o;
         return score == student.score
                 && Objects.equals(surname, student.surname);
     }
