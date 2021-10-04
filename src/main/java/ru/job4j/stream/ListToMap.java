@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class ListToMap {
     public Map<String, Student1> students(List<Student1> list) {
       return list.stream()
-              .distinct()
-              .collect(Collectors.toMap(Student1::getSurname, value -> value));
+              .collect(Collectors.toMap(Student1::getSurname, value -> value,
+               (surname, surname2) -> surname));
     }
 }
