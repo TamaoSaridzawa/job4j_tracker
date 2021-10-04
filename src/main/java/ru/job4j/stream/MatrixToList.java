@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 public class MatrixToList {
     public  List<Integer> arrayToList(Integer[][] matrix) {
         return Stream.of(matrix)
-                .flatMap(Arrays::stream)
+                .flatMap(Stream::of)
                 .collect(Collectors.toList());
     }
 }
