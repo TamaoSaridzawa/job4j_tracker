@@ -17,10 +17,11 @@ public class JobTest {
         List<Job> users = new ArrayList<>();
         users.add(new Job("Gleb", 21));
         users.add(new Job("Danila", 27));
-        List<Job> expected = new ArrayList<>();
-        expected.add(new Job("Danila", 27));
-        expected.add(new Job("Gleb", 21));
-        Collections.sort(users, comparatorByName);
+        List<Job> expected = List.of(
+                new Job("Danila", 27),
+                new Job("Gleb", 21)
+        );
+        users.sort(comparatorByName);
         Assert.assertEquals(users, expected);
     }
 
@@ -30,10 +31,11 @@ public class JobTest {
         List<Job> users = new ArrayList<>();
         users.add(new Job("Danila", 21));
         users.add(new Job("Gleb", 27));
-        List<Job> expected = new ArrayList<>();
-        expected.add(new Job("Gleb", 27));
-        expected.add(new Job("Danila", 21));
-        Collections.sort(users, reversComparatorByName);
+        List<Job> expected = List.of(
+                new Job("Gleb", 27),
+                new Job("Danila", 21)
+        );
+        users.sort(reversComparatorByName);
         Assert.assertEquals(users, expected);
     }
 
@@ -44,11 +46,12 @@ public class JobTest {
                 new Job("Danila", 26),
                 new Job("Gleb", 21),
                 new Job("Danila", 27)));
-        List<Job> expected = new ArrayList(Arrays.asList(
+        List<Job> expected = List.of(
                 new Job("Gleb", 21),
                 new Job("Danila", 26),
-                new Job("Danila", 27)));
-        Collections.sort(users, comparatorByPriority);
+                new Job("Danila", 27)
+        );
+        users.sort(comparatorByPriority);
         Assert.assertEquals(users, expected);
     }
 
@@ -59,11 +62,11 @@ public class JobTest {
                 new Job("Danila", 26),
                 new Job("Gleb", 21),
                 new Job("Danila", 27)));
-        List<Job> expected = new ArrayList(Arrays.asList(
+        List<Job> expected = List.of(
                 new Job("Danila", 27),
                 new Job("Danila", 26),
-                new Job("Gleb", 21)));
-        Collections.sort(users, reversComparatorByPriority);
+                new Job("Gleb", 21));
+        users.sort(reversComparatorByPriority);
         Assert.assertEquals(users, expected);
     }
 
