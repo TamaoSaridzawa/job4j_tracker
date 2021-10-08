@@ -37,4 +37,12 @@ public class Student1 {
     public int hashCode() {
         return Objects.hash(score, surname);
     }
+
+    @Override
+    public String toString() {
+        return "Student1{" +
+                "score=" + score +
+                ", surname='" + surname + '\'' +
+                '}';
+    }
 }
