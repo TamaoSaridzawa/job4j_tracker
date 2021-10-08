@@ -40,9 +40,9 @@ public class Student1 {
 
     @Override
     public String toString() {
-        return "Student1{" +
-                "score=" + score +
-                ", surname='" + surname + '\'' +
-                '}';
+        return "Student1{"
+                + "score=" + score
+                + ", surname='" + surname + '\''
+                + '}';
     }
 }
