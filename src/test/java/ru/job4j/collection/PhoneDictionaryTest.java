@@ -11,7 +11,7 @@ public class PhoneDictionaryTest {
 
     @Test
     public void whenFindBySurName() {
-        PhoneDictionary phone = new PhoneDictionary();
+        var phone = new PhoneDictionary();
         phone.add(new Person("Danila", "Ryzhov", "93612495", " Kuzneck"));
         ArrayList<Person> persons = phone.find("zhov");
         assertThat(persons.get(0).getSurname(), is("Ryzhov"));
@@ -19,7 +19,7 @@ public class PhoneDictionaryTest {
 
     @Test
     public void whenFindByName() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
@@ -29,7 +29,7 @@ public class PhoneDictionaryTest {
 
     @Test
     public void whenFindByNamePredicate() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
