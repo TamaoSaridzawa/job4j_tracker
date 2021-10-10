@@ -52,4 +52,12 @@ public class User {
     public int hashCode() {
         return Objects.hash(passport);
     }
+
+    @Override
+    public String toString() {
+        return "User{"
+                + "passport='" + passport + '\''
+                + ", username='" + username + '\''
+                + '}';
+    }
 }
